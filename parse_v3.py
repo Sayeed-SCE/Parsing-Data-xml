@@ -1,5 +1,4 @@
-import os
-
+import os  # Imports the `os` module for file system operations
 
 def compare_and_flag_files(error_log_file, folder_path, missing_file_log, matched_file_log):
   """
@@ -15,13 +14,17 @@ def compare_and_flag_files(error_log_file, folder_path, missing_file_log, matche
 
   # Get folder filenames as a set (more efficient for large folders)
   folder_files = set(os.listdir(folder_path))
+  # Creates a set of filenames from the specified folder path. Sets are
+  # faster for lookups when checking if a file exists.
 
-  # Open files for writing
+  # Open files for writing in a context manager (automatic closing)
   with open(missing_file_log, 'w') as missing_file, open(matched_file_log, 'w') as matched_file:
-    # Loop through each line in the error log
+    # Loop through each line in the error log file
     for line in open(error_log_file, 'r'):
       # Extract the referenced XML filename (assuming filename only, no path)
       xml_filename = line.strip().split('/')[-1]  # Extract last part (filename)
+      # Reads a line from the error log, removes leading/trailing whitespace,
+      # and extracts the filename assuming it's the last part after splitting by '/'.
 
       # Check if the file exists in the folder using membership in the set
       if xml_filename in folder_files:
@@ -30,7 +33,6 @@ def compare_and_flag_files(error_log_file, folder_path, missing_file_log, matche
       else:
         # File not found, write to missing file
         missing_file.write(f"Missing file: {xml_filename}\n")
-
 
 if __name__ == "__main__":
   # Make paths configurable (replace with your actual paths)
