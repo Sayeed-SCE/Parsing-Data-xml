@@ -5,7 +5,7 @@ To run the project, Type  python3 parse_v1.py or python parse_v2.py in the termi
     Make sure to enter the path for xml data folder and Error logs file are correct. 
     
 There are two versions of this mini project.
-    Version 1 only enter the missing data to the text file.
+    Version 1 only enters the missing data into the missig text file in directory.
     Version 2 generates two files every that we run the code.
         a. Missed files
         b. Matched or existed file
