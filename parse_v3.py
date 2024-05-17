@@ -4,12 +4,6 @@ def compare_and_flag_files(error_log_file, folder_path, missing_file_log, matche
   """
   Compares XML references in an error log with a folder, flags missing files,
   and saves them to separate text files for missing and matched files.
-
-  Args:
-      error_log_file (str): Path to the error log file containing XML references.
-      folder_path (str): Path to the folder containing the XML files.
-      missing_file_log (str): Path to the output text file for missing files.
-      matched_file_log (str): Path to the output text file for matched files.
   """
 
   # Get folder filenames as a set (more efficient for large folders)

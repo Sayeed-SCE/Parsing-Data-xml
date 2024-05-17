@@ -7,10 +7,6 @@ def compare_and_flag_missing(error_log_file, folder_path, missing_file_log):
     Compares XML references in an error log with a folder, flags missing files,
     and saves them to a text file.
 
-    Args:
-        error_log_file (str): Path to the error log file containing XML references.
-        folder_path (str): Path to the folder containing the XML files.
-        missing_file_log (str): Path to the output text file for missing files.
     """
 
     # Open the error log file in read mode
@@ -34,12 +30,6 @@ def compare_and_flag_missing(error_log_file, folder_path, missing_file_log):
             if xml_filename not in folder_files:
                 # If the file does not exist, write a message to the missing file log
                 missing_file.write(f"Missing file: {xml_filename}\n")
-
-    # Optional: Additional processing can be performed on existing files
-    # Uncomment and use the code below to parse the XML and process it
-    # with open(os.path.join(folder_path, xml_filename), 'r') as xml_file:
-    #     xml_tree = ET.parse(xml_file)
-    #     # Process the XML tree here
     pass
 
 # Main execution block to run the function if the script is executed directly

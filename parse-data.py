@@ -1,16 +1,13 @@
 # Import the os module for interacting with the operating system
 import os
 
-# Import ElementTree from the xml.etree module and alias it as ET
-from xml.etree import ElementTree as ET
-
 def compare_and_flag_missing(error_log_file="/Users/sayeed/desktop/mini project/error_log.txt",
                              folder_path="/Users/sayeed/desktop/mini project/folder_xml",
                              missing_file_log="/Users/sayeed/desktop/mini project/missing_files.txt"):
     """
     Compares XML references in an error log with a folder, flags missing files,
     and saves them to a text file.
-    
+
     """
     
     # Open the error log file in read mode
@@ -31,11 +28,7 @@ def compare_and_flag_missing(error_log_file="/Users/sayeed/desktop/mini project/
                 # If the file does not exist, write a message to the missing file log
                 missing_file.write(f"Missing file: {xml_filename}\n")
             else:
-                # Optional: Additional processing can be performed on existing files
-                # Uncomment and use the code below to parse the XML and process it
-                # with open(os.path.join(folder_path, xml_filename), 'r') as xml_file:
-                #     xml_tree = ET.parse(xml_file)
-                #     # Process the XML tree here
+                # Optional: Additional processing can be performed if desired. 
                 pass
 
 # Main execution block to run the function if the script is executed directly
