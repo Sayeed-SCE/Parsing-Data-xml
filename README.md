@@ -1,4 +1,4 @@
-Mini Project Parsing DATA
+```` Mini Project Parsing DATA
 
 This project used Python as a programming language. 
 To run the project, Type  python3 parse_v1.py or python parse_v2.py in the terminal.
@@ -26,5 +26,5 @@ parse_v2.py
 
     The script assumes the error log file contains references to XML files by filename only (no path information).
     It efficiently checks for file existence using a set of filenames retrieved from the specified folder.
-    The script uses context managers (`with open(...)`) to ensure proper file opening and closing.
+    The script uses context managers (`with open(...)`) to ensure proper file opening and closing. ````
 
