@@ -18,7 +18,7 @@ parse_v1.py is version-1 just populate the text file with missed files.
     Once finished, a "missing_files.txt" file will be generated in the same directory as the script.
 
 parse_v2.py
-    ##This script compares XML references in an error log with a folder, identifying missing files. 
+    This script compares XML references in an error log with a folder, identifying missing files. 
 
     It generates separate text files named with timestamps (e.g., missing_files_2024-05-17_16-15-00.txt) to list missing and matched files.  The script prompts the user for the directory containing the error log and the folder name containing the XML files.
 
