@@ -11,7 +11,7 @@ There are two versions of this mini project.
         b. Matched or existed file
 
  parse_v1.py is version-1 just populate the text file with missed files.
-    This version 1 identifies missing XML files referenced in an error log. 
+    The version 1 identifies missing XML files referenced in an error log. 
     It compares the filenames listed in the error log with the actual files present in a specified folder.
 
     Run the script from your terminal: python3 parse_v1.py
@@ -19,7 +19,7 @@ There are two versions of this mini project.
     Once finished, a "missing_files.txt" file will be generated in the same directory as the script.
 
  parse_v2.py
-    This version 2 compares XML references in an error log with a folder, identifying missing files. 
+    The version 2 compares XML references in an error log with a folder, identifying missing files. 
 
     It generates separate text files named with timestamps (e.g., missing_files_2024-05-17_16-15-00.txt) to list missing and matched files.  
     The script prompts the user for the directory containing the error log and the folder name containing the XML files.
